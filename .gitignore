@@ -218,3 +218,8 @@ __marimo__/
 
 # Duckdb db
 *.duckdb
+
+.bruin.yml
+logs/runs
+logs/*.log
+*.py[cod]
