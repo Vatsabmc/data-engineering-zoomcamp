@@ -223,3 +223,8 @@ __marimo__/
 logs/runs
 logs/*.log
 *.py[cod]
+
+# Parquet files
+*.parquet
+*.csv
+*.crc
