@@ -1,82 +1,104 @@
 # Data Engineering Zoomcamp - Personal Implementation
 
-This repository contains my implementation and learning progress from the [DataTalks.Club Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp), a comprehensive course covering modern data engineering practices and tools.
+Personal implementation of the DataTalks.Club Data Engineering Zoomcamp:
+https://github.com/DataTalksClub/data-engineering-zoomcamp
 
-## 📋 Course Overview
+This repository tracks hands-on work across the full course path, including
+Docker/Terraform, orchestration, warehousing, analytics engineering,
+data platforms, batch processing, and streaming.
 
-The Data Engineering Zoomcamp is a free, community-driven course that covers:
-- Data pipelines and orchestration
-- Containerization with Docker
-- Infrastructure as Code with Terraform
-- Data warehousing
-- Analytics engineering
-- Stream processing
+## Course Context
 
-## 🎯 Project Goals
+The official Zoomcamp (2026 track) is organized into modules plus workshops and
+a final project. This repo follows the same module naming pattern at the root:
 
-- Build end-to-end data pipelines
-- Learn industry-standard tools and practices
-- Create a portfolio project demonstrating data engineering skills
-- Share knowledge and best practices
+- 01-docker-terraform
+- 02-workflow-orchestration
+- 03-data-warehouse
+- 04-analytics-engineering
+- 05-data-platforms
+- 06-batch
+- 07-streaming
 
-## 📁 Repository Structure
+## Repository Layout
 
-```
-.
-├── 01-docker-terraform/    # Week 1: Docker & Terraform basics
-├── pipeline/               # Data pipeline scripts
-├── data/                   # Data files and lookups
-├── terraform/              # Infrastructure as Code
-└── docker-compose.yaml     # Container orchestration
-```
+Top-level folders in this implementation:
 
-## 🚀 Getting Started
+- [01-docker-terraform](01-docker-terraform)
+- [02-workflow-orchestration](02-workflow-orchestration)
+- [03-data-warehouse](03-data-warehouse)
+- [04-analytics-engineering](04-analytics-engineering)
+- [05-data-platforms](05-data-platforms)
+- [06-batch](06-batch)
+- [07-streaming](07-streaming)
 
-### Prerequisites
+Supporting files and outputs:
+
+- [pyproject.toml](pyproject.toml), [uv.lock](uv.lock)
+- [taxi_pipeline.duckdb](taxi_pipeline.duckdb), [duckdb.db](duckdb.db)
+- [test.ipynb](test.ipynb)
+- [logs](logs), [tmp](tmp)
+
+## Progress by Module
+
+1. [Module 1: Containerization and Infrastructure as Code](01-docker-terraform)
+Work includes Docker Compose, ingestion scripts, SQL checks, and Terraform setup.
+
+2. [Module 2: Workflow Orchestration](02-workflow-orchestration)
+Contains multiple orchestration flows and cloud-oriented workflow variants.
+
+3. [Module 3: Data Warehousing](03-data-warehouse)
+Includes loading scripts and SQL for warehouse-style analysis.
+
+4. [Module 4: Analytics Engineering](04-analytics-engineering)
+dbt project and models in
+[04-analytics-engineering/taxi_rides_ny](04-analytics-engineering/taxi_rides_ny).
+
+5. [Module 5: Data Platforms](05-data-platforms)
+Bruin pipelines and assets in
+[05-data-platforms/my-first-pipeline](05-data-platforms/my-first-pipeline) and
+[05-data-platforms/zoomcamp](05-data-platforms/zoomcamp).
+
+6. [Module 6: Batch Processing](06-batch)
+Spark and batch homework scripts with local data folders.
+
+7. [Module 7: Streaming](07-streaming)
+Kafka/Flink streaming jobs, producers/consumers, and homework SQL.
+
+## Quick Start
+
+Prerequisites:
 
 - Python 3.13+
-- Docker & Docker Compose
-- PostgreSQL (via Docker)
-- Terraform (optional, for infrastructure setup)
-- uv (Python package manager)
+- uv
+- Docker and Docker Compose
 
-### Installation
+Setup:
 
-1. Clone the repository
-2. Create a Python virtual environment
-3. Install dependencies with `uv sync`
-4. Follow week-specific setup instructions in respective folders
+```bash
+uv sync
+```
 
-## 📅 Course Modules
+Then run module-specific tasks from each folder README or scripts. Current
+module READMEs available in:
 
-### [Week 1: Docker & Terraform](./01-docker-terraform/)
-Introduction to containerization, data ingestion, and infrastructure as code.
+- [01-docker-terraform/README.md](01-docker-terraform/README.md)
+- [04-analytics-engineering/taxi_rides_ny/README.md](04-analytics-engineering/taxi_rides_ny/README.md)
+- [05-data-platforms/my-first-pipeline/README.md](05-data-platforms/my-first-pipeline/README.md)
+- [05-data-platforms/zoomcamp/README.md](05-data-platforms/zoomcamp/README.md)
 
-### Week 2: Workflow Orchestration
-*To be added*
+## Useful References
 
-### Week 3: Data Warehouse
-*To be added*
+- Official course repo:
+	https://github.com/DataTalksClub/data-engineering-zoomcamp
+- Course FAQ:
+	https://datatalks.club/faq/data-engineering-zoomcamp.html
+- DataTalks.Club Slack:
+	https://datatalks.club/slack.html
+- NYC TLC trip records:
+	https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
 
-### Week 4: Analytics Engineering
-*To be added*
+## Notes
 
-### Week 5: Batch Processing
-*To be added*
-
-### Week 6: Stream Processing
-*To be added*
-
-### Week 7: Project
-*To be added*
-
-## 🔗 Useful Links
-
-- [DataTalks.Club Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
-- [NYC Taxi & Limousine Commission Data](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
-- [Docker Documentation](https://docs.docker.com/)
-- [Terraform Documentation](https://www.terraform.io/docs)
-
-## 📝 Notes
-
-This is a personal learning repository. Code and approaches may differ from the official course materials as I adapt concepts to my own learning style and explore additional variations.
+This is a learning repository. Some implementations intentionally diverge from
+official homework solutions while preserving the same concepts and objectives.
